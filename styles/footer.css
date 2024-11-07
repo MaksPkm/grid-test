@@ -1,7 +1,7 @@
 .footer {
     display: flex;
-    justify-content: center;
-    padding: 80px 0 136px 0;
+    justify-content: space-between;
+    padding: 80px 130px 136px 130px;
     background: 
     url('../images/background/Wave.svg') no-repeat bottom;
     background-size: contain;
@@ -17,6 +17,7 @@
 
 
 .footer-info {
+    margin-right: 30px;
 }
 
 .footer-info-socials {
@@ -97,6 +98,10 @@
 
 
 .footer-forms-feedback {
+    margin-top: 48px;
+}
+.footer-form-title {
+    margin-bottom: 16px;
 }
 
 .footer-feedback-form div {
@@ -109,16 +114,28 @@
 
 
 
-.footer-feedback-form input::placeholder {
-    color: var(--color-black)
-}
-
 .footer-feedback-form label:first-child {
     margin-right: 30px;
 }
 
 .footer-feedback-form label {
     position: relative;
+}
+
+.footer-feedback-form label::after {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+.name-input-container::after {
+    background: url(../images/icons/footer-icons/icon-user-last.svg) no-repeat;
+}
+.mail-input-container::after {
+    background: url(../images/icons/footer-icons/icon-mail-last.svg) no-repeat;
 }
 
 .footer-feedback-form label > div {
@@ -128,32 +145,51 @@
     width: 100%;
     height: 100%;
     border-radius: 16px;
-    background: rgba(194, 194, 194, .24);
+    background: var(--color-24-gray-soft);
+    opacity: .24;
+    transition: opacity var(--animation);
     z-index: -1;
 }
+.footer-feedback-form label:hover > div {
+    opacity: .45;
+}
+
+
 
 .footer-feedback-form input {
     width: 270px;
     height: 48px;
     font-size: 18px;
     border: none;
-    border-radius: 16px;
+    border-radius: 16px; 
     background: transparent;
-    padding: 8px 16px;
+    padding: 8px 40px 8px 16px;
     outline: none;
+}
+.footer-feedback-form input:focus + div,
+.footer-feedback-form textarea:focus + div {
+    opacity: .45;
+}
+
+.feedback-textarea > div {
+    border: 2px solid var(--color-purple-dark);
+}
+.feedback-textarea::after {
+    background: url(../images/icons/footer-icons/icon-edit-last.svg) no-repeat;
 }
 
 .footer-feedback-form textarea {
     width: 370px;
     height: 80px;
     resize: none;
-    margin-right: 30px;
     font-size: 18px;
-    color: var(--color-black);
+    color: var(--color-purple-dark);
     border: none;
     border-radius: 16px;
-    background: rgba(194, 194, 194, .24);
+    background: transparent;
     padding: 16px;
+    padding-right: 40px;
+    outline: none;
 }
 
 .footer-feedback-form textarea::placeholder {
@@ -161,9 +197,90 @@
     font-family: var(--font-family-b);
 }
 
+.footer-feedback-form input::placeholder {
+    color: var(--color-black)
+}
+
 .footer-feedback-form button {
     width: 170px;
     height: 80px;
 }
+
+
+@media (max-width: 1250px) {
+    .footer {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .footer {
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-top: 30px;
+    }
+
+    .footer-info {
+        padding-top: 80px;
+    }
+}
+
+
+@media (max-width: 700px) {
+    .footer-feedback-form > div {
+        flex-direction: column;
+    }
+
+    .footer-feedback-form label:first-child {
+        margin-right: 0;
+    }
+
+    .mail-input-container {
+        margin-top: 15px;
+    }
+
+    .footer-feedback-form div:first-child,
+    .feedback-textarea {
+        margin-bottom: 15px;
+    }
+
+    .footer-feedback-form button {
+        height: 50px;
+        align-self: flex-end;
+    }
+
+    .footer-feedback-form input,
+    .footer-feedback-form textarea {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .footer-info > div:last-child {
+        display: none;
+    }
+
+    .footer-follow-email {
+        font-size: 7vw;
+    }
+
+    .footer-feedback-form button {
+        width: 110px;
+        height: 30px;
+        font-size: 16px;
+    }
+
+    .footer-socials-title {
+        display: none;
+    }
+
+    .footer {
+        padding-bottom: 40px;
+        background: url(../images/background/back-mob/Shape.svg) no-repeat;
+        background-position: bottom left;
+    }
+}
+
 
 

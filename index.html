@@ -22,12 +22,12 @@
     <header class="header">
 
         <div class="header-logo">
-            <img src="images/icons/icon-layout-head-desk.svg" alt="icon">
+            <img src="images/icons/mobile-icons/icon-menu.svg" class="header-logo-burger" alt="icon">
+            <img src="images/icons/icon-layout-head-desk.svg" class="header-logo-img" alt="icon">
             <span class="header-logo-title">GRID</span>
         </div>
 
         <nav class="header-nav">
-            <!-- <span class="header-link-active">How it works</span> -->
             <a class="header-link" href="#">How it works</a>
             <div class="header-link-point"></div>
             <a class="header-link" href="#">Who we are</a>
@@ -46,15 +46,20 @@
 
         <img class="main-background-rectangle" src="images/background/Rectangle-pryamygol.svg" alt="1">
         <img class="main-background-dots" src="images/background/Dots1.svg" alt="2">
+        <div class="main-background-wave"></div>
         
         <div class="main-text">
             <p class="main-text-title">
-                Combine <span>fine</span> images
+                Combine <span><span class="main-text-fine">fine</span> images</span>
             </p>
             <p class="main-text-subtitle">
                 To represent a product
             </p>
         </div>
+
+        <a href="#" class="main-arrow-down">
+            <img src="images/icons/mobile-icons/icon-arrowright.svg" alt="1">
+        </a>
 
         <div class="main-grid">
             <div class="main-grid-text1">
@@ -264,22 +269,25 @@
             </div>
 
             <div class="footer-forms-feedback">
-                <h3 class="footer-socials-title">KEEP IN TOUCH</h3>
+                <h3 class="footer-socials-title footer-form-title">KEEP IN TOUCH</h3>
                 <form class="footer-feedback-form">
                     <div>
-                        <label>
+                        <label class="name-input-container">
                             <input type="text" placeholder="your name">
                             <div></div>
                         </label>
                         
-                        <label>
+                        <label class="mail-input-container">
                             <input type="text" placeholder="E-mail">
                             <div></div>
                         </label>
                     </div>
                     <div>
-                        <textarea placeholder="Leave your message"></textarea>
-                        <button>SEND</button>
+                        <label class="feedback-textarea">
+                            <textarea placeholder="Leave your message"></textarea>
+                            <div></div>
+                        </label>
+                        <button class="primary-button">SEND</button>
                     </div>
                 </form>
             </div>

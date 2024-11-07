@@ -1,5 +1,5 @@
 .price {
-    padding: 70px 0 80px;
+    padding: 70px 40px 80px 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -136,6 +136,7 @@
     background: var(--color-24-gray-soft) 
     url('../images/icons/icon-check-ok.svg') no-repeat center;
     margin-right: 16px;
+    flex-shrink: 0;
 }
 
 .price-card:nth-child(2) li::before {
@@ -154,6 +155,65 @@
 
 .price-card:nth-child(2) .price-button {
     font-size: 24px;
+}
+
+@media (max-width: 950px) {
+    .price {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .price-card {
+        padding: 14px;
+        margin-right: 14px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .price-title {
+        font-size: 8vw;
+    }
+
+    .price-subtitle {
+        font-size: 5vw;
+    }
+
+    .price-cards {
+        flex-direction: column;
+    }
+
+    .price-card {
+        padding: 24px;
+        margin-bottom: 24px;
+        box-shadow: 0 16px 24px 0 rgba(38, 50, 56, 0.08), 0 8px 8px 0 rgba(38, 50, 56, 0.12);
+    }
+
+    .price-card::after {
+        content: none;
+    }
+}
+
+/* 
+@media (max-width: 500px) {
+    
+} */
+@media (max-width: 350px) {
+
+    .price {
+        align-items: initial;
+    }
+
+    .price-title {
+        font-size: 32px;
+    }
+    
+    .price-subtitle {
+        margin-top: 8px;
+        font-size: 24px;
+        font-family: var(--font-family-r);
+    }
+
 }
 
 
